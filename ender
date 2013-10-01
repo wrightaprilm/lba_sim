@@ -1,0 +1,11 @@
+;
+END
+
+Begin MrBays;
+lset nst=6 rates=invgamma; 
+Prset statefreqpr=dirichlet(1,1,1,1);
+mcmc ngen=5000000 samplefreq=100 printfreq=1000 nruns=2 nchains=2 stoprule=yes stopval=0.01;
+sumt burnin = 1250;
+sump burnin = 1250;
+
+End;
